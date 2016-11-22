@@ -1,4 +1,5 @@
-#include "SFE_LSM9DS0.h"
+#include "lsm9ds0.h"
+#include <stdio.h>
 #include <iostream>
 #include <unistd.h>
 
@@ -7,9 +8,10 @@
 
 using namespace std;
 
-LSM9DS0 dof(1, LSM9DS0_G, LSM9DS0_XM);
+LSM9DS0 dof(2, LSM9DS0_G, LSM9DS0_XM);
 
 int main() {
+  printf("START!\n");
   int status = dof.begin();
   cout << "Status: " << status << endl;
 	while (1) {
@@ -29,7 +31,7 @@ int main() {
 		cout << dof.calcAccel(dof.ay);
 		cout << ", ";
 		cout << dof.calcAccel(dof.az) << endl;
-
+//
 		dof.readGyro();
 
 		// Now we can use the gx, gy, and gz variables as we please.
@@ -57,6 +59,7 @@ int main() {
 
 		dof.readTemp();
 		cout << "T: " << (21.0 + (float)dof.temperature/8.) << endl;
+//*/
 		sleep(1);
 	}
 }
