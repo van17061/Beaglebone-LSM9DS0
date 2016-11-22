@@ -8,7 +8,7 @@
 
 using namespace std;
 
-LSM9DS0 dof(2, LSM9DS0_G, LSM9DS0_XM);
+LSM9DS0 dof(1, LSM9DS0_G, LSM9DS0_XM);
 
 int main() {
   printf("START!\n");
