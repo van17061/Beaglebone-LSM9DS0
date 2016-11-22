@@ -10,7 +10,7 @@ Implements the LSM9DS0 functions on Beaglebone Black
 #include <stdlib.h>
 #include <unistd.h>
 #include <fcntl.h>
-#include <linux/i2c-dev.h>
+#include </usr/include/linux/i2c-dev.h>
 #include <sys/ioctl.h>
 #include <stropts.h>
 #include <stdio.h>
@@ -564,7 +564,7 @@ void LSM9DS0::I2CwriteByte(unsigned char address, unsigned char subAddress, unsi
 	}
 	int result = i2c_smbus_write_byte_data(file, subAddress, data);
 	if (result == -1) {
-		printf("Failed to write byte to " + subAddress);
+		cout << "Failed to write byte to " << subAddress;
 	}
 }
 

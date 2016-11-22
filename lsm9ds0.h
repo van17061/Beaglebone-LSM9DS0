@@ -5,8 +5,8 @@ Alex Fuhr, The Ohio State University
 Original Creation Date: February 14, 2014 (Happy Valentines Day!)
 https://github.com/projectzen/Beaglebone-LSM9DS0
 ******************************************************************************/
-#ifndef __lsm9ds0.h
-#define __lsm9ds0.h
+#ifndef __lsm9ds0
+#define __lsm9ds0
 
 ////////////////////////////
 // LSM9DS0 Gyro Registers //
@@ -96,7 +96,6 @@ https://github.com/projectzen/Beaglebone-LSM9DS0
 #define TIME_WINDOW			0x3D
 #define ACT_THS				0x3E
 #define ACT_DUR				0x3F
-
 // The LSM9DS0 functions over both I2C or SPI. This library supports both.
 // But the interface mode used must be sent to the LSM9DS0 constructor. Use
 // one of these two as the first parameter of the constructor.
